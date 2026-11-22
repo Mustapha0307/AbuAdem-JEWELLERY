@@ -1,0 +1,12 @@
+{
+  "source": "manual",
+  "sourceLabel": "Set by the boutique",
+  "updatedAt": null,
+  "currency": "DZD",
+  "prices": {
+    "18": { "perGram": null, "previousPerGram": null },
+    "21": { "perGram": null, "previousPerGram": null },
+    "22": { "perGram": null, "previousPerGram": null },
+    "24": { "perGram": null, "previousPerGram": null }
+  }
+}

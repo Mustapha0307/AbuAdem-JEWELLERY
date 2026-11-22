@@ -1,0 +1,8 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; background: #080808; }
+body { margin: 0; color: #F5F1E8; font-family: Jost, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.gold-text { background: linear-gradient(135deg, #F0D77A, #D4AF37 45%, #C5A46D); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hairline { height: 1px; background: linear-gradient(90deg, transparent, #C5A46D88, transparent); }
+:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@keyframes drift { 0%,100% { transform: translateY(0); opacity: .5 } 50% { transform: translateY(6px); opacity: 1 } }
