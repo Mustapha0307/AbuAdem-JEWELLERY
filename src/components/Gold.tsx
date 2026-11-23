@@ -10,7 +10,7 @@ function status(d: Data | null): { text: string; tone: string } {
   if (!d || !d.updatedAt || KARATS.every((k) => d.prices[k]?.perGram == null)) return { text: "Unavailable", tone: "text-ash" };
   if (d.source === "manual") return { text: "Manually updated", tone: "text-champagne" };
   const age = Date.now() - new Date(d.updatedAt).getTime();
-  return age < 15 * 60_000 ? { text: "Live", tone: "text-gold" } : { text: "Delayed", tone: "text-champagne" };
+  return age < 15 * 60_000 ? { text: "Live", tone: "text-gold animate-pulse" } : { text: "Delayed", tone: "text-champagne" };
 }
 
 export default function Gold() {
@@ -27,7 +27,7 @@ export default function Gold() {
         <div className="hairline mx-auto my-8 w-40" />
         <div className="mb-6 flex flex-wrap items-center justify-between gap-2 text-sm">
           <span className={s.tone}>● {s.text}{data?.sourceLabel && s.text !== "Unavailable" ? ` · ${data.sourceLabel}` : ""}</span>
-          <span className="text-ash">{data?.updatedAt ? `Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}` : "No update yet"}</span>
+          <span className="text-ash ">{data?.updatedAt ? `Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })}` : "No update yet"}</span>
         </div>
         <dl className="grid grid-cols-2 gap-3">
           {KARATS.map((k) => {
@@ -36,7 +36,7 @@ export default function Gold() {
             const diff = has && r!.previousPerGram != null ? r!.perGram! - r!.previousPerGram! : 0;
             return (
               <div key={k} className="rounded-sm border border-white/10 bg-ink p-5">
-                <dt className="font-serif text-2xl text-champagne">{k}K Gold</dt>
+                <dt className="font-serif text-2xl text-champagne">{k}K Gold <small className="text-sm text-ash ">starting from:</small></dt>
                 <dd className="mt-3">
                   {has ? (<>
                     <span className="text-2xl font-light">{fmt.format(r!.perGram!)}</span>

@@ -5,8 +5,8 @@ import Contact, { contactItems } from "./components/Contact";
 import Gold from "./components/Gold";
 
 const Logo = ({ size = 72 }: { size?: number }) => (
-  <div style={{ width: size, height: size }} className="grid place-items-center rounded-full border border-gold/70" aria-hidden>
-    <span className="font-serif gold-text" style={{ fontSize: size * 0.5 }}>{b.monogram}</span>
+  <div style={{ width: size, height: size }} className="overflow-hidden rounded-full border border-gold/70">
+    <img src="/images/logo.jpg" alt="مجوهرات ابو ادم" className="h-full w-full object-cover" />
   </div>
 );
 

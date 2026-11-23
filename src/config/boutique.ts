@@ -16,4 +16,4 @@ export const boutique = {
   mapsUrl: "https://maps.app.goo.gl/wwYGrcEGPYTXVdUVA",                     // Google Maps share link (opens app + navigation)
   mapsEmbedQuery: 'مجوهرات ابو ادم, Oran',              // address or "lat,lng" used for the embedded map
 };
-export const goldDataUrl = "/gold-prices.json"; // admin-edited file or future API endpoint
+export const goldDataUrl = "/api/getPrice"; // API endpoint returning the gold price shape
