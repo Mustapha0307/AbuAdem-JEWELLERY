@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { GET } from "./src/api/getPrice/route";
+import { GET } from "./api/getPrice";
 
 export default defineConfig({
   plugins: [
