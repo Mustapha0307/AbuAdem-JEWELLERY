@@ -1,7 +1,7 @@
 // SINGLE SOURCE OF TRUTH — edit everything about the boutique here.
 // Any link left as "" is hidden automatically (no placeholder links shipped).
 export const boutique = {
-  name: "ABU ADEM JEWELLERY",            // TODO: replace with the real boutique name
+  name: "ABU ADEM JEWELLERY",
   monogram: "AJ",                   // letter shown in the logo mark
   tagline: "Gold shaped by hand, worn for a lifetime.",
   statement: "Every piece is chosen and finished with care, so it can be handed down.",
