@@ -13,7 +13,7 @@ const Logo = ({ size = 72 }: { size?: number }) => (
 function Hero() {
   return (
     <header className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 text-center">
-      <div className="pointer-events-none absolute inset-0" aria-hidden
+      <motion.div initial={{ scale: 0, y: 16 }} animate={{ scale: 1, y: 0 }} transition={{ duration: 0.5 }} className="pointer-events-none absolute inset-0" aria-hidden
         style={{ background: "radial-gradient(60% 45% at 50% 38%, #D4AF3724, transparent 70%), radial-gradient(circle at 50% 38%, transparent 0 150px, #C5A46D22 151px 152px, transparent 153px 230px, #C5A46D14 231px 232px, transparent 233px)" }} />
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }} className="relative flex flex-col items-center">
         <Logo size={88} />
